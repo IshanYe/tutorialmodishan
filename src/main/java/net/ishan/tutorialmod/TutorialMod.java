@@ -1,6 +1,7 @@
 package net.ishan.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.ishan.tutorialmod.block.ModBlocks;
 import net.ishan.tutorialmod.item.ModCreativeModTabs;
 import net.ishan.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -24,6 +25,8 @@ public class TutorialMod {
 
     public TutorialMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModBlocks.register(modEventBus);
 
         ModCreativeModTabs.register(modEventBus);
 
